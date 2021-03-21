@@ -1,7 +1,7 @@
 {
   "name": "oop-team-profile-generator",
   "version": "1.0.0",
-  "description": "unit10assignment",
+  "description": "unit 10 assignment",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -12,7 +12,7 @@
     "jet": "^0.6.6-0",
     "require": "^2.4.20"
   },
-  "devDependencies": {},
+  "devDependencies": {"jest": "^24.9.0"},
   "scripts": {
     "test": "jest --verbose test/*"
   },
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/MarcoC007/OOP-Team-Profile-Generator.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/MarcoC007/OOP-Team-Profile-Generator/issues"
   },

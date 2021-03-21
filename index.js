@@ -13,7 +13,7 @@ const teamList = [];
 // This is the array of questions to fill the employee info
 
 const UITeam = () => {
-    process.stdout.write('Would you like to create your team?')
+    process.stdout.write('Would you like to create your team?');
    
     const questions = () => {
        inquirer 
