@@ -4,10 +4,12 @@ const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
 
 const fs = require('fs');
-const inquirer = require('require');
+const path = require('path');
+const inquirer = require('inquirer');
 const render = require("./output/render")
-const distPath = path.join(distDir, 'team.html');
 const distDir = path.resolve(__dirname, 'dist');
+const distPath = path.join(distDir, 'team.html');
+
 const teamList = [];
 
 // This is the array of questions to fill the employee info
@@ -15,9 +17,7 @@ const teamList = [];
 const UITeam = () => {
     process.stdout.write('Would you like to create your team?');
    
-    const questions = () => {
-       inquirer 
-       .prompt ([
+    const questions = [
            
           { 
             type: 'input', 
@@ -104,9 +104,8 @@ const UITeam = () => {
                 }
             },
         },
-       ])
-   };
-
+    ];
+   ;
    promptUser = () => {
 
     inquirer.prompt(questions).then(function (response) {
@@ -126,9 +125,11 @@ const UITeam = () => {
         newEmployee();
     });
     
+   
     
    }
-   
+ 
+  
    newEmployee = () => {
     inquirer   
     .prompt ([
@@ -139,9 +140,11 @@ const UITeam = () => {
              default: true,
          },
        ]).then(function(answers) {
-           if (answers.newEmployee) {
+           
+           if (answers.newEmployee === true) {
                promptUser();
            }
+    
            else {
                const html = render(teamList)
                fs.writeFile(distPath, html, function(err) {
@@ -151,6 +154,8 @@ const UITeam = () => {
        })
    }
 
+   promptUser();
 }
+
 
 UITeam();
