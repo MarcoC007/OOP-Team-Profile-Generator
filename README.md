@@ -11,7 +11,7 @@ In this app the user will create a Team Profile file.
 * HTML
 
 ## Video
-[Link](https://user-images.githubusercontent.com/72709524/112742177-1b226680-8f5a-11eb-82cf-107a14baac65.mp4)
+[Link](https://user-images.githubusercontent.com/72709524/112742297-68eb9e80-8f5b-11eb-8320-b41e28138430.mp4)
 
 ## License 
 
